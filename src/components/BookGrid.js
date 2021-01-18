@@ -1,10 +1,11 @@
 import React from 'react'
 import BookCard from './BookCard'
 import IMG_NOT_FOUND from '../img/not-found.png';
+import { FlexGrid } from './styled';
 
 const BookGrid = ({ data }) => {
     return (
-        <div>
+        <FlexGrid>
             {data.map((book) => {
                  return (<BookCard 
                     key={book.id} 
@@ -14,8 +15,8 @@ const BookGrid = ({ data }) => {
                     summary={book.volumeInfo.description}
                     authors={book.volumeInfo.authors}
                 />)
-})}
-        </div>
+            })}
+        </FlexGrid>
     );
 }
 
