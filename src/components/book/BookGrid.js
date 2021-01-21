@@ -1,7 +1,7 @@
 import React from 'react'
 import BookCard from './BookCard'
-import IMG_NOT_FOUND from '../img/not-found.png';
-import { FlexGrid } from './styled';
+import IMG_NOT_FOUND from '../../img/not-found.png';
+import { FlexGrid } from '../styled';
 
 const BookGrid = ({ data }) => {
     return (

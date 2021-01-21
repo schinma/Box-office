@@ -1,5 +1,8 @@
 import React, { useEffect, useReducer } from 'react'
 import { useParams } from 'react-router-dom'
+import Authors from '../components/book/Authors';
+import BookMainData from '../components/book/BookMainData';
+import Details from '../components/book/Details';
 import { apiGET } from '../config';
 
 
@@ -64,10 +67,25 @@ const Book = () => {
             </div>
         )
     }
+    console.log(book);
     
     return (
         <div>
-            book :
+            <BookMainData 
+                title={book.volumeInfo.title}
+                subtitle={book.volumeInfo.subtitle}
+                summary={book.volumeInfo.description}
+                image={book.volumeInfo.imageLinks.small}
+            />
+            <Authors authors={book.volumeInfo.authors}/>
+            <h2>Details</h2>
+            <Details   
+                publisher={book.volumeInfo.publisher} 
+                publishedDate={book.volumeInfo.publishedDate}
+                pageCount={book.volumeInfo.pageCount}
+                language={book.volumeInfo.language}
+            />
+            
         </div>
     )
 }

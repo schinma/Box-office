@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import BookGrid from '../components/BookGrid';
+import BookGrid from '../components/book/BookGrid';
 import MainPageLayout from '../components/MainPageLayout';
 import {apiGET} from '../config';
 

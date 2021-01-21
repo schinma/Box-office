@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { SearchCard } from './styled';
+import { SearchCard } from '../styled';
 
 const BookCard = ({id, title, image, summary, authors}) => {
 
